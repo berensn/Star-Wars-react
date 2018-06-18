@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import  gql  from 'graphql-tag';
+import { 
+  DetailContainer,
+  DetailPageTitle,
+  DetailItemListTitle,
+  DetailItem,
+  DetailLeft,
+  DetailRight, 
+  DetailListContainer} from '../styles/detail.style';
 import '../App.css';
 
 
@@ -53,39 +61,51 @@ class DetailPeople extends Component {
       } 
     });
     return(
-      <div className="detailContainer">
+      <DetailContainer>
         <div className="pageTitle">People // Detail //</div>
-        <div className="detailPageTitle">
+        <DetailPageTitle>
           {details.name}
           <br/>
-        </div>
-        <div className="detailList">
-          <span>Gender: {details.gender}</span><br/>
-          <span>Height: {details.height}</span><br/>
-          <span>Mass: {details.mass}</span><br/>
-          <span>Hair Color: {details.hair_color}</span><br/>
-          <span>Eye Color: {details.eye_color}</span><br/>
-          <span>Skin Color: {details.skin_color}</span><br/>
-          <span>Birth Year: {details.birth_year}</span><br/>
-          <span>Homeworld: {homeworld}</span><br/>          
-        </div>
-        <span className="detailItemListTitle">Vehicles</span><br/>
-        {details.vehicles.length !== 0 ?
-          details.vehicles.map(v =>
-          <li key={v.name}>{v.name}</li>
-        ) : <li>None</li>}
-        <span className="detailItemListTitle">Starships</span><br/>
-        {details.starships.length !== 0 ?
-          details.starships.map(v =>
-          <li key={v.name}>{v.name}</li>
-        ) : <li>None</li>}
-        <span className="detailItemListTitle">Films</span><br/>
-        {details.films.length !== 0 ?
-          details.films.map(v =>
-          <li key={v.title}>{v.title}</li>
-        ) : <li>None</li>}<br/>
+        </DetailPageTitle>
+        <DetailListContainer>
+          <DetailLeft>
+            <DetailItem>Gender: </DetailItem><br/>
+            <DetailItem>Height: </DetailItem><br/>
+            <DetailItem>Mass: </DetailItem><br/>
+            <DetailItem>Hair Color: </DetailItem><br/>
+            <DetailItem>Eye Color: </DetailItem><br/>
+            <DetailItem>Skin Color: </DetailItem><br/>
+            <DetailItem>Birth Year: </DetailItem><br/>
+            <DetailItem>Homeworld: </DetailItem><br/>    
+          </DetailLeft>
+          <DetailRight> 
+            {details.gender}<br/> 
+            {details.height}<br/> 
+            {details.mass}<br/> 
+            {details.hair_color}<br/> 
+            {details.eye_color}<br/> 
+            {details.skin_color}<br/> 
+            {details.birth_year}<br/> 
+            {homeworld}<br/> 
+          </DetailRight>     
+        </DetailListContainer>
+        <DetailItemListTitle>Vehicles</DetailItemListTitle><br/>
+          {details.vehicles.length !== 0 ?
+            details.vehicles.map(v =>
+            <li key={v.name}>{v.name}</li>
+          ) : <li>None</li>}
+        <DetailItemListTitle>Starships</DetailItemListTitle><br/>
+          {details.starships.length !== 0 ?
+            details.starships.map(v =>
+            <li key={v.name}>{v.name}</li>
+          ) : <li>None</li>}
+        <DetailItemListTitle>Films</DetailItemListTitle><br/>
+          {details.films.length !== 0 ?
+            details.films.map(v =>
+            <li key={v.title}>{v.title}</li>
+          ) : <li>None</li>}<br/>
 				<div className="back"><Link to='/people'>Back</Link></div>
-			</div>
+			</DetailContainer>
     );
   }
 }

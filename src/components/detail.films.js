@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import  gql  from 'graphql-tag';
+import { dataMap } from './global';
+import { 
+  DetailContainer,
+  DetailPageTitle,
+  DetailItemListTitle,
+  DetailItem,
+  DetailLeft,
+  DetailRight, 
+  DetailListContainer} from '../styles/detail.style';
 import '../App.css';
 
 
@@ -45,42 +54,42 @@ class DetailFilms extends Component {
       } 
     });
     return(
-      <div className="detailContainer">
+      <DetailContainer>
         <div className="pageTitle">Film // Detail //</div>
-        <div className="detailPageTitle">
+        <DetailPageTitle>
           {details.title}
           <br/>
-        </div>
-        <div className="detailList">
-          <span className="detailItemListTitle">Opening Crawl:</span><br/>
+        </DetailPageTitle>
+        <DetailListContainer>
+          <DetailItemListTitle>Opening Crawl:</DetailItemListTitle><br/>          
           <span>{details.opening_crawl}</span><br/><br/>
-          <span>Episode ID: {details.episode_id}</span><br/>
-          <span>Director: {details.director}</span><br/>
-          <span>Producer: {details.producer}</span><br/>
-          <span>Release Date: {details.release_date}</span><br/>         
-        </div>
-        <span className="detailItemListTitle">Planets</span><br/>
-        {details.planets.length !== 0 ?
-          details.planets.map(v =>
-          <li key={v.name}>{v.name}</li>
-        ) : <li>None</li>}
-        <span className="detailItemListTitle">Vehicles</span><br/>
-        {details.vehicles.length !== 0 ?
-          details.vehicles.map(v =>
-          <li key={v.name}>{v.name}</li>
-        ) : <li>None</li>}
-        <span className="detailItemListTitle">Starships</span><br/>
-        {details.starships.length !== 0 ?
-          details.starships.map(v =>
-          <li key={v.name}>{v.name}</li>
-        ) : <li>None</li>}
-        <span className="detailItemListTitle">Species</span><br/>
-        {details.species.length !== 0 ?
-          details.species.map(v =>
-          <li key={v.name}>{v.name}</li>
-        ) : <li>None</li>}<br/>
-				<div className="back"><Link to='/films'>Back</Link></div>
-			</div>
+          <DetailLeft>
+            <DetailItem>Episode ID: </DetailItem><br/>
+            <DetailItem>Director: </DetailItem><br/>
+            <DetailItem>Producer: </DetailItem><br/>
+            <DetailItem>Release Date: </DetailItem><br/> 
+          </DetailLeft>
+          <DetailRight>      
+            {details.episode_id}<br/>
+            {details.director}<br/>
+            {details.producer}<br/>
+            {details.release_date}<br/>
+          </DetailRight>
+        </DetailListContainer>
+        <DetailItemListTitle>Planets</DetailItemListTitle><br/>
+          {details.planets.length !== 0 ?
+            dataMap(details.planets, false) : <li>None</li>}
+        <DetailItemListTitle>Vehicles</DetailItemListTitle><br/>
+          {details.vehicles.length !== 0 ?
+            dataMap(details.vehicles, false) : <li>None</li>}
+        <DetailItemListTitle>Starships</DetailItemListTitle><br/>
+          {details.starships.length !== 0 ?
+            dataMap(details.starships, false) : <li>None</li>}
+        <DetailItemListTitle>Species</DetailItemListTitle><br/>
+          {details.species.length !== 0 ?
+            dataMap(details.species, false) : <li>None</li>}<br/>
+				<div><Link to='/films'>Back</Link></div>
+			</DetailContainer>
     );
   }
 }

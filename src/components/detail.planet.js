@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import  gql  from 'graphql-tag';
+import { 
+DetailContainer,
+DetailPageTitle,
+DetailItemListTitle,
+DetailItem,
+DetailLeft,
+DetailRight, 
+DetailListContainer} from '../styles/detail.style';
 import '../App.css';
 
 
@@ -37,39 +45,49 @@ class DetailPlanet extends Component {
       if (s.name === decodeURIComponent(this.props.match.params.name)){
         details = s;
         //console.log(details);
-        this.props.data.planets.forEach(p =>{ 
-        })
       } 
     });
     return(
-      <div className="detailContainer">
+      <DetailContainer>
         <div className="pageTitle">Planet // Detail //</div>
-        <div className="detailPageTitle">
+        <DetailPageTitle>
           {details.name}
           <br/>
-        </div>
-        <div className="detailList">
-          <span>Gravity: {details.gravity}</span><br/>
-          <span>Population: {details.population}</span><br/>
-          <span>Diameter: {details.diameter}</span><br/>
-          <span>Terrain: {details.terrain}</span><br/>
-          <span>Orbital Period: {details.orbital_period}</span><br/>
-          <span>Rotation Period: {details.rotation_period}</span><br/>
-          <span>Surface Water: {details.surface_water}</span><br/>
-          <span>Climate: {details.climate}</span><br/>          
-        </div>
-        <span className="detailItemListTitle">Residents</span><br/>
+        </DetailPageTitle>
+        <DetailListContainer>
+          <DetailLeft>
+            <DetailItem>Gravity:</DetailItem><br/>
+            <DetailItem>Population:</DetailItem><br/>
+            <DetailItem>Diameter:</DetailItem><br/>
+            <DetailItem>Terrain:</DetailItem><br/>
+            <DetailItem>Orbital Period:</DetailItem><br/> 
+            <DetailItem>Rotation Period:</DetailItem><br/>
+            <DetailItem>Surface Water:</DetailItem><br/>
+            <DetailItem>Climate:</DetailItem><br/>        
+          </DetailLeft>
+          <DetailRight>
+            {details.gravity}<br/>
+            {details.population}<br/>
+            {details.diameter}<br/>
+            {details.terrain}<br/>
+            {details.orbital_period}<br/>
+            {details.rotation_period}<br/>
+            {details.surface_water}<br/>
+            {details.climate}<br/> 
+          </DetailRight>
+        </DetailListContainer>
+        <DetailItemListTitle>Residents</DetailItemListTitle><br/>
         {details.residents.length !==0 ?
           details.residents.map(v =>
           <li key={v.name}>{v.name}</li>
         ) : <li>None</li>}
-        <span className="detailItemListTitle">Films</span><br/>
+        <DetailItemListTitle>Films</DetailItemListTitle><br/>
         {details.films.length !== 0 ?
           details.films.map(v =>
           <li key={v.title}>{v.title}</li>
         ) : <li>None</li>}<br/>
-				<div className="back"><Link to='/planets'>Back</Link></div>
-			</div>
+				<div><Link to='/planets'>Back</Link></div>
+			</DetailContainer>
     );
   }
 }

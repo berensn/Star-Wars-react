@@ -7,6 +7,10 @@ li{
 		list-style: none;
 }
 
+img{
+	width: 100%;
+}
+
 .App {
   text-align: center;
 	border-bottom: 1px solid #333;
@@ -99,57 +103,14 @@ li{
 }
 
 .detailPageTitle{
-		/*color: #ebebeb;*/
 		color: #edec51;
 		font-size: 2em;
 		width: 100%;
 		text-align: center;
 }
 
-.detailListLeft{
-		float: left;
-		text-align: right;
-}
-
-.detailListRight{
-		float: right;
-		text-align: left;
-}
-
 .detailItemListTitle{
 		font-size: 1em;
 		font-weight: 600;
 		color: #ebebeb;
-}
-
-.homePageTitle{
-	font-size: 3em;
-	font-weight: 600;
-	color: #ebebeb;
-	padding: 20px 0px 50px 0px;
-}
-
-.homeLogos{
-	width: 90%;
-	text-align: center;
-	display: inline;
-}
-
-#empireLogo{
-	width: 30%;
-	float: left;
-	padding-left: 12%;
-}
-
-#rebelLogo{
-	width: 30%;
-	float: right;
-	padding-right: 12%;
-}
-#empire{
-	width: 100%;
-}
-
-#rebel{
-	width: 100%;
 }

@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import  gql  from 'graphql-tag';
+import { 
+  DetailContainer,
+  DetailPageTitle,
+  DetailItemListTitle,
+  DetailItem,
+  DetailLeft,
+  DetailRight, 
+  DetailListContainer} from '../styles/detail.style';
 import '../App.css';
 
 
@@ -43,37 +51,52 @@ class DetailStarships extends Component {
       } 
     });
     return(
-      <div className="detailContainer">
+      <DetailContainer>
         <div className="pageTitle">Starship // Detail //</div>
-        <div className="detailPageTitle">
+        <DetailPageTitle>
           {details.name}
           <br/>
-        </div>
-        <div className="detailList">
-          <span>Model: {details.model}</span><br/>
-          <span>Manufacturer: {details.manufacturer}</span><br/>
-          <span>Starship Class: {details.starship_class}</span><br/>
-          <span>Length: {details.length}</span><br/>
-          <span>Max Atmosphering Speed: {details.max_atmosphering_speed}</span><br/>
-          <span>Hyperdrive Rating: {details.hyperdrive_rating}</span><br/>
-          <span>MGLT: {details.MGLT}</span><br/>
-          <span>Cargo Capacity: {details.cargo_capacity}</span><br/>
-          <span>Crew: {details.crew}</span><br/>
-          <span>Passengers: {details.passengers}</span><br/>  
-          <span>Cost in Credits: {details.cost_in_credits}</span><br/>        
-        </div>
-        <span className="detailItemListTitle">Pilots</span><br/>
-        {details.pilots.length !== 0 ?
-          details.pilots.map(v =>
-          <li key={v.name}>{v.name}</li>
-        ) : <li>None</li>}
-        <span className="detailItemListTitle">Films</span><br/>
-        {details.films.length !== 0 ?
-          details.films.map(v =>
-          <li key={v.title}>{v.title}</li>
-        ) : <li>None</li>}<br/>
-				<div className="back"><Link to='/starships'>Back</Link></div>
-			</div>
+        </DetailPageTitle>
+        <DetailListContainer>
+          <DetailLeft>
+            <DetailItem>Model: </DetailItem><br/>
+            <DetailItem>Manufacturer: </DetailItem><br/>
+            <DetailItem>Starship Class: </DetailItem><br/>
+            <DetailItem>Length: </DetailItem><br/>
+            <DetailItem>Max Atmosphering Speed: </DetailItem><br/>
+            <DetailItem>Hyperdrive Rating: </DetailItem><br/>
+            <DetailItem>MGLT: </DetailItem><br/>
+            <DetailItem>Cargo Capacity: </DetailItem><br/>
+            <DetailItem>Crew: </DetailItem><br/>
+            <DetailItem>Passengers: </DetailItem><br/>  
+            <DetailItem>Cost in Credits: </DetailItem><br/>        
+          </DetailLeft>
+          <DetailRight>
+            {details.model}<br/>
+            {details.manufacturer}<br/>
+            {details.starship_class}<br/>
+            {details.length}<br/>
+            {details.max_atmosphering_speed}<br/>
+            {details.hyperdrive_rating}<br/>
+            {details.MGLT}<br/>
+            {details.cargo_capacity}<br/>
+            {details.crew}<br/>
+            {details.passengers}<br/>
+            {details.cost_in_credits}<br/>
+          </DetailRight>
+        </DetailListContainer>
+        <DetailItemListTitle>Pilots</DetailItemListTitle><br/>
+          {details.pilots.length !== 0 ?
+            details.pilots.map(v =>
+            <li key={v.name}>{v.name}</li>
+          ) : <li>None</li>}
+        <DetailItemListTitle>Films</DetailItemListTitle><br/>
+          {details.films.length !== 0 ?
+            details.films.map(v =>
+            <li key={v.title}>{v.title}</li>
+          ) : <li>None</li>}<br/>
+				<div><Link to='/starships'>Back</Link></div>
+			</DetailContainer>
     );
   }
 }

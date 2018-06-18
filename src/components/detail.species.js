@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import  gql  from 'graphql-tag';
+import { 
+  DetailContainer,
+  DetailPageTitle,
+  DetailItemListTitle,
+  DetailItem,
+  DetailLeft,
+  DetailRight, 
+  DetailListContainer} from '../styles/detail.style';
 import '../App.css';
 
 
@@ -51,35 +59,48 @@ class DetailSpecies extends Component {
       } 
     });
     return(
-      <div className="detailContainer">
+      <DetailContainer>
         <div className="pageTitle">Species // Detail //</div>
-        <div className="detailPageTitle">
+        <DetailPageTitle>
           {details.name}
           <br/>
-        </div>
-        <div className="detailList">
-          <span>Designation: {details.designation}</span><br/>
-          <span>Classification: {details.classification}</span><br/>
-          <span>Average Lifespan: {details.average_lifespan}</span><br/>
-          <span>Hair Colors: {details.hair_colors}</span><br/>
-          <span>Eye Colors: {details.eye_colors}</span><br/>
-          <span>Skin Colors: {details.skin_colors}</span><br/>
-          <span>Average Height: {details.average_height}</span><br/>
-          <span>Homeworld: {homeworld}</span><br/>  
-          <span>Language: {details.language}</span><br/>        
-        </div>
-        <span className="detailItemListTitle">People</span><br/>
-        {details.people.length !== 0 ?
-          details.people.map(v =>
-          <li key={v.name}>{v.name}</li>
-        ) : <li>None</li>}
-        <span className="detailItemListTitle">Films</span><br/>
-        {details.films.length !== 0 ?
-          details.films.map(v =>
-          <li key={v.title}>{v.title}</li>
-        ) : <li>None</li>}<br/>
-				<div className="back"><Link to='/people'>Back</Link></div>
-			</div>
+        </DetailPageTitle>
+        <DetailListContainer>
+          <DetailLeft>
+            <DetailItem>Designation: </DetailItem><br/>
+            <DetailItem>Classification: </DetailItem><br/>
+            <DetailItem>Average Lifespan: </DetailItem><br/>
+            <DetailItem>Hair Colors: </DetailItem><br/>
+            <DetailItem>Eye Colors: </DetailItem><br/>
+            <DetailItem>Skin Colors: </DetailItem><br/>
+            <DetailItem>Average Height: </DetailItem><br/>
+            <DetailItem>Homeworld: </DetailItem><br/>  
+            <DetailItem>Language: </DetailItem><br/> 
+          </DetailLeft>
+          <DetailRight>
+            {details.designation}<br/>
+            {details.classification}<br/>
+            {details.average_lifespan}<br/>
+            {details.hair_colors}<br/>
+            {details.eye_colors}<br/>
+            {details.skin_colors}<br/>
+            {details.average_height}<br/>          
+            {homeworld}<br/>
+            {details.language}<br/>
+          </DetailRight>       
+        </DetailListContainer>
+        <DetailItemListTitle>People</DetailItemListTitle><br/>
+          {details.people.length !== 0 ?
+            details.people.map(v =>
+            <li key={v.name}>{v.name}</li>
+          ) : <li>None</li>}
+        <DetailItemListTitle>Films</DetailItemListTitle><br/>
+          {details.films.length !== 0 ?
+            details.films.map(v =>
+            <li key={v.title}>{v.title}</li>
+          ) : <li>None</li>}<br/>
+				<div><Link to='/people'>Back</Link></div>
+			</DetailContainer>
     );
   }
 }
