@@ -36,7 +36,7 @@ class DetailPlanet extends Component {
     this.props.data.planets.forEach(s =>{
       if (s.name === decodeURIComponent(this.props.match.params.name)){
         details = s;
-        console.log(details);
+        //console.log(details);
         this.props.data.planets.forEach(p =>{ 
         })
       } 

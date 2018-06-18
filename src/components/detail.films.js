@@ -41,7 +41,7 @@ class DetailFilms extends Component {
     this.props.data.films.forEach(s =>{
       if (s.title === decodeURIComponent(this.props.match.params.name)){
         details = s;
-        console.log(details);
+        //console.log(details);
       } 
     });
     return(

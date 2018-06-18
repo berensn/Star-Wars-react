@@ -13,7 +13,7 @@ gql`{
 
 class Species extends Component {
   render(){
-    console.log(this.props);
+    //console.log(this.props);
     if (this.props.data.loading === true){
 			return <div>Loading...</div>;
 		}

@@ -39,7 +39,7 @@ class DetailStarships extends Component {
     this.props.data.starships.forEach(s =>{
       if (s.name === decodeURIComponent(this.props.match.params.name)){
         details = s;
-        console.log(details);
+        //console.log(details);
       } 
     });
     return(

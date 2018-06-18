@@ -42,7 +42,7 @@ class DetailSpecies extends Component {
     this.props.data.species.forEach(s =>{
       if (s.name === decodeURIComponent(this.props.match.params.name)){
         details = s;
-        console.log(details);
+        //console.log(details);
         this.props.data.planets.forEach(p =>{
           if (p.url === s.homeworld){
             homeworld = p.name;

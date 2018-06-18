@@ -35,10 +35,10 @@ class DetailVehicles extends Component {
     }
 
     this.props.data.vehicles.forEach(s =>{
-      console.log(this.props.match.params.name);
+      //console.log(this.props.match.params.name);
       if (s.name === decodeURIComponent(this.props.match.params.name)){
         details = s;
-        console.log(details);
+        //console.log(details);
       } 
     });
     return(

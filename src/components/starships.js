@@ -13,7 +13,7 @@ gql`{
 
 class Starships extends Component {
   render(){
-    console.log(this.props.data);
+    //console.log(this.props.data);
     if (this.props.data.loading === true){
 			return <div>Loading...</div>;
     }
