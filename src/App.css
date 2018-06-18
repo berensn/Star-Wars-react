@@ -82,6 +82,10 @@ li{
 		font-family: Roboto;
 }
 
+.navSelected{
+	font-weight: 600;
+}
+
 .pageTitle{
 		color: #ebebeb;
 		font-size: 2em;
@@ -121,7 +125,7 @@ li{
 .homePageTitle{
 	font-size: 3em;
 	font-weight: 600;
-	color: #edec51;
+	color: #ebebeb;
 	padding: 20px 0px 50px 0px;
 }
 
