@@ -42,7 +42,7 @@ class DetailPeople extends Component {
     }
 
     this.props.data.people.forEach(s =>{
-      if (s.name === this.props.match.params.name){
+      if (s.name === decodeURIComponent(this.props.match.params.name)){
         details = s;
         console.log(details);
         this.props.data.planets.forEach(p =>{ 

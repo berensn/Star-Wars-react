@@ -25,7 +25,7 @@ class Starships extends Component {
 						<div className= "flexItem">
 							{starship.name}						
 						</div>	
-						<div className="flexItemDetail"><Link to={`/starships/${starship.name}`}>+ Details</Link></div>
+						<div className="flexItemDetail"><Link to={`/starships/${encodeURIComponent(starship.name)}`}>+ Details</Link></div>
 					</div>					
 				)}				 
 			</div>

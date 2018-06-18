@@ -25,7 +25,7 @@ class Species extends Component {
 						<div className= "flexItem">
 							{speci.name}						
 						</div>	
-						<div className="flexItemDetail"><Link to={`/species/${speci.name}`}>+ Details</Link></div>
+						<div className="flexItemDetail"><Link to={`/species/${encodeURIComponent(speci.name)}`}>+ Details</Link></div>
 					</div>					
 				)}				 
 			</div>

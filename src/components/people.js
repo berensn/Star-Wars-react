@@ -25,7 +25,7 @@ class People extends Component {
 						<div className= "flexItem" >
 							{person.name}						
 						</div>	
-						<div className="flexItemDetail"><Link to={`/people/${person.name}`}>+ Details</Link></div>
+						<div className="flexItemDetail"><Link to={`/people/${encodeURIComponent(person.name)}`}>+ Details</Link></div>
 					</div>					
 				)}				 
 			</div>

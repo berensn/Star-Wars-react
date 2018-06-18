@@ -25,7 +25,7 @@ class Planets extends Component {
             <div className= "flexItem">
               {planet.name}						
             </div>	
-            <div className="flexItemDetail"><Link to={`/planets/${planet.name}`}>+ Details</Link></div>
+            <div className="flexItemDetail"><Link to={`/planets/${encodeURIComponent(planet.name)}`}>+ Details</Link></div>
           </div>					
         )}				 
       </div>
