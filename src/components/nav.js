@@ -7,7 +7,7 @@ class Nav extends Component {
     return(
       <div>
         <nav className="navElements">
-          <span className="navItem"><NavLink to='/' activeClassName='navSelected'>Home</NavLink></span>
+          <span className="navItem"><NavLink to='/home' activeClassName='navSelected'>Home</NavLink></span>
           <span className="navItem"><NavLink to='/people' activeClassName='navSelected'>People</NavLink></span> 
           <span className="navItem"><NavLink to='/planets' activeClassName='navSelected'>Planets</NavLink></span> 
           <span className="navItem"><NavLink to='/species' activeClassName='navSelected'>Species</NavLink></span> 

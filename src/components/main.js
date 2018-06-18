@@ -21,7 +21,7 @@ class Main extends Component{
       <div>        
         <div className="routerFlexContainer">
           <Switch>
-            <Route exact path='/' component={Home} />
+            <Route exact path='/home' component={Home} />
             <Route exact path='/people' component={People} />
             <Route exact path='/planets' component={Planets} />
             <Route exact path='/species' component={Species} />
