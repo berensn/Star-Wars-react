@@ -7,12 +7,6 @@ export const NavLinq = styled(NavLink).attrs({
   &:.navSelected{
     font-weight: 600;
   }
-<<<<<<< HEAD
-  &:hover{
-    font-weight: 600;
-  }
-=======
->>>>>>> 166b9ca4f23f8b6529f67bd3a068e70cd3809ab2
 `;
 
 export const NavItem = styled.span`
