@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import  gql  from 'graphql-tag';
-import { Link } from 'react-router-dom';
+import { categoryDataMap } from './global';
+import { PageTitle } from '../styles/category.style';
 import '../App.css';
 
 const PlanetQuery = 
@@ -19,15 +20,8 @@ class Planets extends Component {
 		}
     return(
       <div>		
-        <div className="pageTitle">Planets //</div>		                  
-        {this.props.data.planets.map(planet =>
-          <div className="flexChild"  key={planet.name}>
-            <div className= "flexItem">
-              {planet.name}						
-            </div>	
-            <div className="flexItemDetail"><Link to={`/planets/${encodeURIComponent(planet.name)}`}>+ Details</Link></div>
-          </div>					
-        )}				 
+        <PageTitle>Planets //</PageTitle>		                  
+        {categoryDataMap(this.props.data.planets, false, 'planets')}				 
       </div>
     );
   }

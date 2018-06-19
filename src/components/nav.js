@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import {
   NavItem,
-  NavElements,
-  NavLinq
+  NavElements
 } from '../styles/nav.style';
 import '../App.css'
 
-class Nav extends Component {
+class Nav extends Component {  
   render(){
+    var people = 'people';
+    var planets = 'planets';
+    var species = 'species';
+    var vehicles = 'vehicles';
+    var starships = 'starships';
+    var films = 'films';
     return(
       <div>
         <NavElements>
-          <NavItem><NavLinq to='/home' activeClassName='navSelected'>Home</NavLinq></NavItem>
-          <NavItem><NavLinq to='/people' activeClassName='navSelected'>People</NavLinq></NavItem> 
-          <NavItem><NavLinq to='/planets' activeClassName='navSelected'>Planets</NavLinq></NavItem> 
-          <NavItem><NavLinq to='/species' activeClassName='navSelected'>Species</NavLinq></NavItem> 
-          <NavItem><NavLinq to='/vehicles' activeClassName='navSelected'>Vehicles</NavLinq></NavItem> 
-          <NavItem><NavLinq to='/starships' activeClassName='navSelected'>Starships</NavLinq></NavItem> 
-          <NavItem><NavLinq to='/films' activeClassName='navSelected'>Films</NavLinq></NavItem> 
-        </NavElements>
+          <NavItem><NavLink to='/home' >Home</NavLink></NavItem>
+          <NavItem><NavLink to={`/category/${people}/`} >People</NavLink></NavItem> 
+          <NavItem><NavLink to={`/category/${planets}/`} >Planets</NavLink></NavItem> 
+          <NavItem><NavLink to={`/category/${species}/`} >Species</NavLink></NavItem> 
+          <NavItem><NavLink to={`/category/${vehicles}/`} >Vehicles</NavLink></NavItem> 
+          <NavItem><NavLink to={`/category/${starships}/`} >Starships</NavLink></NavItem> 
+          <NavItem><NavLink to={`/category/${films}/`} >Films</NavLink></NavItem>
+         </NavElements>
       </div>
     );
   }

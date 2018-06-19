@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import  gql  from 'graphql-tag';
 import { detailDataMap } from './global';
 import { 
-DetailContainer,
-DetailPageTitle,
-DetailItemListTitle,
-DetailItem,
-DetailLeft,
-DetailRight, 
-DetailListContainer
+  DetailContainer,
+  DetailPageTitle,
+  DetailItemListTitle,
+  DetailItem,
+  DetailLeft,
+  DetailRight, 
+  DetailListContainer
 } from '../styles/detail.style';
 import { PageTitle } from '../styles/category.style';
 import '../App.css';
