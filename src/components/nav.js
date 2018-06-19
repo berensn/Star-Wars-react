@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
+=======
+import {NavLink} from 'react-router-dom';
+>>>>>>> 166b9ca4f23f8b6529f67bd3a068e70cd3809ab2
 import {
   NavItem,
   NavElements,
