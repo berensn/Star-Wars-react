@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const DetailContainer = styled.div`
-  width: 90%;
+  width: 95%;
   text-align: center;
 `;
 
@@ -13,8 +13,8 @@ export const DetailPageTitle = styled.div`
 `;
 
 export const DetailItemListTitle = styled.span`
-  font-size: 1em;
-  font-weight: 600;
+  font-size: 1.15em;
+  font-weight: 400;
   color: #ebebeb;
 `;
 
@@ -35,6 +35,6 @@ export const DetailRight = styled.div`
 `;
 
 export const DetailListContainer = styled.div`
-  width: 70%;
+  width: 90%;
   margin: auto;
 `;
