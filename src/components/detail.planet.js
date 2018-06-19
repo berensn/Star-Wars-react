@@ -10,7 +10,9 @@ DetailItemListTitle,
 DetailItem,
 DetailLeft,
 DetailRight, 
-DetailListContainer} from '../styles/detail.style';
+DetailListContainer
+} from '../styles/detail.style';
+import { PageTitle } from '../styles/category.style';
 import '../App.css';
 
 
