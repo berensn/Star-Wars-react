@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav /> should include the correct links 1`] = `
+<div>
+  <nav
+    className="sc-htpNat hGxvve"
+  >
+    <span
+      className="sc-bwzfXH dSnPBo"
+    >
+      <a
+        aria-current={null}
+        className="sc-bdVaJa lkrUhG"
+        href="/home"
+        onClick={[Function]}
+        style={undefined}
+      >
+        Home
+      </a>
+    </span>
+    <span
+      className="sc-bwzfXH dSnPBo"
+    >
+      <a
+        aria-current={null}
+        className="sc-bdVaJa lkrUhG"
+        href="/category/people/"
+        onClick={[Function]}
+        style={undefined}
+      >
+        People
+      </a>
+    </span>
+    <span
+      className="sc-bwzfXH dSnPBo"
+    >
+      <a
+        aria-current={null}
+        className="sc-bdVaJa lkrUhG"
+        href="/category/planets/"
+        onClick={[Function]}
+        style={undefined}
+      >
+        Planets
+      </a>
+    </span>
+    <span
+      className="sc-bwzfXH dSnPBo"
+    >
+      <a
+        aria-current={null}
+        className="sc-bdVaJa lkrUhG"
+        href="/category/species/"
+        onClick={[Function]}
+        style={undefined}
+      >
+        Species
+      </a>
+    </span>
+    <span
+      className="sc-bwzfXH dSnPBo"
+    >
+      <a
+        aria-current={null}
+        className="sc-bdVaJa lkrUhG"
+        href="/category/vehicles/"
+        onClick={[Function]}
+        style={undefined}
+      >
+        Vehicles
+      </a>
+    </span>
+    <span
+      className="sc-bwzfXH dSnPBo"
+    >
+      <a
+        aria-current={null}
+        className="sc-bdVaJa lkrUhG"
+        href="/category/starships/"
+        onClick={[Function]}
+        style={undefined}
+      >
+        Starships
+      </a>
+    </span>
+    <span
+      className="sc-bwzfXH dSnPBo"
+    >
+      <a
+        aria-current={null}
+        className="sc-bdVaJa lkrUhG"
+        href="/category/films/"
+        onClick={[Function]}
+        style={undefined}
+      >
+        Films
+      </a>
+    </span>
+  </nav>
+</div>
+`;
+
+exports[`<Nav /> should match rendered link format 1`] = `
+<a
+  aria-current={null}
+  className="sc-bdVaJa lkrUhG"
+  href="/component/people"
+  onClick={[Function]}
+  style={undefined}
+>
+  People
+</a>
+`;
+
+exports[`<Nav /> should render the correct route format 1`] = `null`;
