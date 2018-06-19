@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import  gql  from 'graphql-tag';
 import { detailDataMap } from './global';
 import { 
@@ -50,6 +50,9 @@ class DetailPlanet extends Component {
         //console.log(details);
       } 
     });
+    if (details.name == null){
+      return <Redirect to='/home'/>
+    }
     return(
       <DetailContainer>
         <PageTitle>Planet // Detail //</PageTitle>
