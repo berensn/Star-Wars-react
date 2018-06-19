@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 import {
   NavItem,
-  NavElements
+  NavElements,
+  NavLinq
 } from '../styles/nav.style';
 import '../App.css'
 
@@ -17,13 +18,13 @@ class Nav extends Component {
     return(
       <div>
         <NavElements>
-          <NavItem><NavLink to='/home' >Home</NavLink></NavItem>
-          <NavItem><NavLink to={`/category/${people}/`} >People</NavLink></NavItem> 
-          <NavItem><NavLink to={`/category/${planets}/`} >Planets</NavLink></NavItem> 
-          <NavItem><NavLink to={`/category/${species}/`} >Species</NavLink></NavItem> 
-          <NavItem><NavLink to={`/category/${vehicles}/`} >Vehicles</NavLink></NavItem> 
-          <NavItem><NavLink to={`/category/${starships}/`} >Starships</NavLink></NavItem> 
-          <NavItem><NavLink to={`/category/${films}/`} >Films</NavLink></NavItem>
+          <NavItem><NavLinq to='/home' >Home</NavLinq></NavItem>
+          <NavItem><NavLinq to={`/category/${people}/`} >People</NavLinq></NavItem> 
+          <NavItem><NavLinq to={`/category/${planets}/`} >Planets</NavLinq></NavItem> 
+          <NavItem><NavLinq to={`/category/${species}/`} >Species</NavLinq></NavItem> 
+          <NavItem><NavLinq to={`/category/${vehicles}/`} >Vehicles</NavLinq></NavItem> 
+          <NavItem><NavLinq to={`/category/${starships}/`} >Starships</NavLinq></NavItem> 
+          <NavItem><NavLinq to={`/category/${films}/`} >Films</NavLinq></NavItem>
          </NavElements>
       </div>
     );
