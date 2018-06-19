@@ -5,3 +5,16 @@ body {
   background: #000 url('./assets/img/bg_starfield_01.png') no-repeat;
 	color: #bababa;
 }
+
+a{
+	color: #edec51;
+	text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+	width: 100%;
+}

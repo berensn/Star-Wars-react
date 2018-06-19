@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+export const NavLinq = styled(NavLink).attrs({
+  activeClassName: css`
+    font-weight: 600;
+    `
+});
+
 export const NavItem = styled.span`
   padding: 10px;
   font-family: Roboto;

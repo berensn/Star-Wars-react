@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import  gql  from 'graphql-tag';
+import { dataMap } from './global';
 import { 
   DetailContainer,
   DetailPageTitle,
@@ -60,7 +61,7 @@ class DetailSpecies extends Component {
     });
     return(
       <DetailContainer>
-        <div className="pageTitle">Species // Detail //</div>
+        <PageTitle>Species // Detail //</PageTitle>
         <DetailPageTitle>
           {details.name}
           <br/>
@@ -90,15 +91,9 @@ class DetailSpecies extends Component {
           </DetailRight>       
         </DetailListContainer>
         <DetailItemListTitle>People</DetailItemListTitle><br/>
-          {details.people.length !== 0 ?
-            details.people.map(v =>
-            <li key={v.name}>{v.name}</li>
-          ) : <li>None</li>}
+          {dataMap(details.people, false)}
         <DetailItemListTitle>Films</DetailItemListTitle><br/>
-          {details.films.length !== 0 ?
-            details.films.map(v =>
-            <li key={v.title}>{v.title}</li>
-          ) : <li>None</li>}<br/>
+          {dataMap(details.films, true)}<br/>
 				<div><Link to='/people'>Back</Link></div>
 			</DetailContainer>
     );

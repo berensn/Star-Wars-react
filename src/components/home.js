@@ -7,7 +7,7 @@ import rebel from '../assets/img/logo_rebel.png';
 const PageTitle = styled.div`
   font-size: 3em;
   font-weight: 600;
-  color: #edec51;
+  color: #ebebeb;
   padding: 20px 0px 50px 0px;
 `;
 const HomeLogos = styled.div`
@@ -32,7 +32,7 @@ class Home extends Component {
       <div className="homeContent">
         <PageTitle>
           Begin here your journey does
-          </PageTitle>
+        </PageTitle>
         <HomeLogos>
           <EmpireLogo>
             <img src={empire} alt={'empire'} />

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import { Link } from 'react-router-dom';
 import  gql  from 'graphql-tag';
+import { dataMap } from './global';
 import { 
   DetailContainer,
   DetailPageTitle,
@@ -10,6 +11,7 @@ import {
   DetailLeft,
   DetailRight, 
   DetailListContainer} from '../styles/detail.style';
+import { PageTitle } from '../styles/category.style'
 import '../App.css';
 
 
@@ -52,7 +54,7 @@ class DetailStarships extends Component {
     });
     return(
       <DetailContainer>
-        <div className="pageTitle">Starship // Detail //</div>
+        <PageTitle>Starship // Detail //</PageTitle>
         <DetailPageTitle>
           {details.name}
           <br/>
@@ -86,15 +88,9 @@ class DetailStarships extends Component {
           </DetailRight>
         </DetailListContainer>
         <DetailItemListTitle>Pilots</DetailItemListTitle><br/>
-          {details.pilots.length !== 0 ?
-            details.pilots.map(v =>
-            <li key={v.name}>{v.name}</li>
-          ) : <li>None</li>}
+          {dataMap(details.pilots, false)}
         <DetailItemListTitle>Films</DetailItemListTitle><br/>
-          {details.films.length !== 0 ?
-            details.films.map(v =>
-            <li key={v.title}>{v.title}</li>
-          ) : <li>None</li>}<br/>
+          {dataMap(details.films, true)}<br/>
 				<div><Link to='/starships'>Back</Link></div>
 			</DetailContainer>
     );

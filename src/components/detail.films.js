@@ -55,7 +55,7 @@ class DetailFilms extends Component {
     });
     return(
       <DetailContainer>
-        <div className="pageTitle">Film // Detail //</div>
+        <PageTitle>Film // Detail //</PageTitle>
         <DetailPageTitle>
           {details.title}
           <br/>
@@ -77,17 +77,13 @@ class DetailFilms extends Component {
           </DetailRight>
         </DetailListContainer>
         <DetailItemListTitle>Planets</DetailItemListTitle><br/>
-          {details.planets.length !== 0 ?
-            dataMap(details.planets, false) : <li>None</li>}
+          {dataMap(details.planets, false)}
         <DetailItemListTitle>Vehicles</DetailItemListTitle><br/>
-          {details.vehicles.length !== 0 ?
-            dataMap(details.vehicles, false) : <li>None</li>}
+          {dataMap(details.vehicles, false)}
         <DetailItemListTitle>Starships</DetailItemListTitle><br/>
-          {details.starships.length !== 0 ?
-            dataMap(details.starships, false) : <li>None</li>}
+          {dataMap(details.starships, false)}
         <DetailItemListTitle>Species</DetailItemListTitle><br/>
-          {details.species.length !== 0 ?
-            dataMap(details.species, false) : <li>None</li>}<br/>
+          {dataMap(details.species, false)}<br/>
 				<div><Link to='/films'>Back</Link></div>
 			</DetailContainer>
     );
