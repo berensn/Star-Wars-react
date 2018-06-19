@@ -96,7 +96,7 @@ class DetailPeople extends Component {
           {detailDataMap(details.starships, false)}
         <DetailItemListTitle>Films</DetailItemListTitle><br/>
           {detailDataMap(details.films, true)}<br/>
-				<div className="back"><Link to='/people'>Back</Link></div>
+				<div><Link to='/people'>Back</Link></div>
 			</DetailContainer>
     );
   }
