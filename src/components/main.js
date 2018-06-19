@@ -1,33 +1,33 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Home from './home';
-import Films from './films';
-import People from './people';
-import Planets from './planets';
-import Species from './species';
-import Starships from './starships';
-import Vehicles from './vehicles';
 import DetailPeople from './detail.people';
 import DetailPlanet from './detail.planet';
 import DetailSpecies from './detail.species';
 import DetailVehicles from './detail.vehicles';
 import DetailStarships from './detail.starships';
 import DetailFilms from './detail.films';
+import Category from './category';
+import styled from 'styled-components';
 import '../App.css';
+
+const RouterFlexContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  min-height: 70vh;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+`;
 
 class Main extends Component{
   render(){
     return(
       <div>        
-        <div className="routerFlexContainer">
+        <RouterFlexContainer>
           <Switch>
             <Route exact path='/home' component={Home} />
-            <Route exact path='/people' component={People} />
-            <Route exact path='/planets' component={Planets} />
-            <Route exact path='/species' component={Species} />
-            <Route exact path='/vehicles' component={Vehicles} />
-            <Route exact path='/starships' component={Starships} />
-            <Route exact path='/films' component={Films} />
+            <Route path='/category/:name' component={Category} />
             <Route path='/people/:name' component={DetailPeople} />
             <Route path='/planets/:name' component={DetailPlanet} />
             <Route path='/species/:name' component={DetailSpecies} />
@@ -36,7 +36,7 @@ class Main extends Component{
             <Route path='/films/:name' component={DetailFilms} />
             <Route component={Home} />
           </Switch>
-        </div>
+        </RouterFlexContainer>
       </div>        
     );
   }

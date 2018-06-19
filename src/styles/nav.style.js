@@ -1,10 +1,16 @@
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom';
 
 export const NavLinq = styled(NavLink).attrs({
-  activeClassName: css`
+  activeClassName: 'navSelected',
+})`
+  &:.navSelected{
     font-weight: 600;
-    `
-});
+  }
+  &:hover{
+    font-weight: 600;
+  }
+`;
 
 export const NavItem = styled.span`
   padding: 10px;

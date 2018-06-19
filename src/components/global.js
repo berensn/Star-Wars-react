@@ -8,7 +8,7 @@ import {
 
 export function detailDataMap(data, flag){
   //console.log(film); 
-  if (data.length !=0){ 
+  if (data.length !== 0){ 
     if (flag){
       return(
         data.map(v =>
@@ -25,7 +25,7 @@ export function detailDataMap(data, flag){
   }
 }
 
-export function categoryDataMap(data, flag){
+export function categoryDataMap(data, flag, path){
   if (flag){
     return(
       data.map(d =>
@@ -33,7 +33,7 @@ export function categoryDataMap(data, flag){
           <FlexItem>
             {d.title}
           </FlexItem>
-          <FlexItemDetail><Link to={`/vehicles/${encodeURIComponent(d.title)}`}>+ Details</Link></FlexItemDetail>
+          <FlexItemDetail><Link to={`/${path}/${encodeURIComponent(d.title)}`}>+ Details</Link></FlexItemDetail>
         </FlexChild>
       )
     );
@@ -44,7 +44,7 @@ export function categoryDataMap(data, flag){
           <FlexItem>
             {d.name}
           </FlexItem>
-          <FlexItemDetail><Link to={`/vehicles/${encodeURIComponent(d.name)}`}>+ Details</Link></FlexItemDetail>
+          <FlexItemDetail><Link to={`/${path}/${encodeURIComponent(d.name)}`}>+ Details</Link></FlexItemDetail>
         </FlexChild>
       )
     );
