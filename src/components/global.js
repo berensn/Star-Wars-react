@@ -6,7 +6,7 @@ import {
   FlexItemDetail
 } from '../styles/category.style';
 
-export function dataMap(data, flag){
+export function detailDataMap(data, flag){
   //console.log(film); 
   if (data.length !=0){ 
     if (flag){
