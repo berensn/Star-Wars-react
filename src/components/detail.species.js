@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import  gql  from 'graphql-tag';
 import { detailDataMap } from './global';
 import { 
@@ -44,8 +44,8 @@ const DetailQuery = gql`
 
 class DetailSpecies extends Component {
   render(){
-    var details = null;
-    var homeworld = 'No Data';
+    let details = {empty: true};
+    let homeworld = 'No Data';
     if (this.props.data.loading === true){
 			return <div>Loading...</div>;
     }
@@ -61,6 +61,9 @@ class DetailSpecies extends Component {
         })
       } 
     });
+    if (details.empty){
+      return <Redirect to="/home" />
+    }
     return(
       <DetailContainer>
         <PageTitle>Species // Detail //</PageTitle>
@@ -96,7 +99,7 @@ class DetailSpecies extends Component {
           {detailDataMap(details.people, false)}
         <DetailItemListTitle>Films</DetailItemListTitle><br/>
           {detailDataMap(details.films, true)}<br/>
-				<div><Link to='/people'>Back</Link></div>
+				<div><Link to='/category/people'>Back</Link></div>
 			</DetailContainer>
     );
   }

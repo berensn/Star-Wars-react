@@ -39,7 +39,7 @@ const DetailQuery = gql`
 
 class DetailPlanet extends Component {
   render(){
-    var details = null;
+    let details = {empty: true};
     if (this.props.data.loading === true){
 			return <div>Loading...</div>;
     }
@@ -50,8 +50,8 @@ class DetailPlanet extends Component {
         //console.log(details);
       } 
     });
-    if (details.name == null){
-      return <Redirect to='/home'/>
+    if (details.empty){
+      return <Redirect to="/home" />
     }
     return(
       <DetailContainer>
@@ -86,7 +86,7 @@ class DetailPlanet extends Component {
         {detailDataMap(details.residents, false)}
         <DetailItemListTitle>Films</DetailItemListTitle><br/>
         {detailDataMap(details.films, true)}<br/>
-				<div><Link to='/planets'>Back</Link></div>
+				<div><Link to='/category/planets'>Back</Link></div>
 			</DetailContainer>
     );
   }
