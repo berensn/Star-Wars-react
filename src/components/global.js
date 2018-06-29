@@ -50,3 +50,7 @@ export function categoryDataMap(data, flag, path){
     );
   }
 }
+
+export function firstLetterUpper(word){
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}

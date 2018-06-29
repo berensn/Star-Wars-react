@@ -3,7 +3,7 @@ import { graphql } from 'react-apollo';
 import  gql  from 'graphql-tag';
 import { Redirect } from 'react-router-dom';
 import { PageTitle } from '../styles/category.style';
-import { categoryDataMap } from './global';
+import { categoryDataMap, firstLetterUpper } from './global';
 import '../App.css';
 
 const UberQuery = 
@@ -31,7 +31,6 @@ class Category extends Component {
   render(){
     let categoryData = {empty: true};
     let pageTitle = '';
-    let path = '';
     let bool = false;
     //console.log(this.props.data);
     if (this.props.data.loading === true){
@@ -41,33 +40,21 @@ class Category extends Component {
     switch(this.props.match.params.name){
       case 'people': 
         categoryData = this.props.data.people;
-        pageTitle = 'People';
-        path = 'people';
         break;
       case 'planets': 
         categoryData = this.props.data.planets;
-        pageTitle = 'Planets';
-        path = 'planets';
        break; 
       case 'species': 
         categoryData = this.props.data.species;
-        pageTitle = 'Species';
-        path = 'species';
         break;
       case 'vehicles': 
         categoryData = this.props.data.vehicles;
-        pageTitle = 'Vehicles';
-        path = 'vehicles';
         break;
       case 'starships': 
         categoryData = this.props.data.starships;
-        pageTitle = 'Starships';
-        path = 'starships';
         break;
       case 'films': 
         categoryData = this.props.data.films;
-        pageTitle = 'Films';
-        path = 'films';
         bool = true;
         break;
       default:
@@ -79,8 +66,8 @@ class Category extends Component {
     }
     return(
 			<div>		
-				<PageTitle>{pageTitle} &#47;&#47;</PageTitle>    	                  
-        {categoryDataMap(categoryData, bool, path)}
+				<PageTitle>{firstLetterUpper(this.props.match.params.name)} &#47;&#47;</PageTitle>    	                  
+        {categoryDataMap(categoryData, bool, this.props.match.params.name)}
 			</div>
     );
   }
