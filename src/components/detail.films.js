@@ -69,10 +69,10 @@ class DetailFilms extends Component {
           <DetailItemListTitle>Opening Crawl:</DetailItemListTitle><br/>          
           <span>{details.opening_crawl}</span><br/><br/>
           <DetailLeft>
-            <DetailItem>Episode ID: </DetailItem><br/>
-            <DetailItem>Director: </DetailItem><br/>
-            <DetailItem>Producer: </DetailItem><br/>
-            <DetailItem>Release Date: </DetailItem><br/> 
+            Episode ID: <br/>
+            Director: <br/>
+            Producer: <br/>
+            Release Date: <br/> 
           </DetailLeft>
           <DetailRight>      
             {details.episode_id}<br/>

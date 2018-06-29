@@ -75,14 +75,14 @@ class DetailPeople extends Component {
         </DetailPageTitle>
         <DetailListContainer>
           <DetailLeft>
-            <DetailItem>Gender: </DetailItem><br/>
-            <DetailItem>Height: </DetailItem><br/>
-            <DetailItem>Mass: </DetailItem><br/>
-            <DetailItem>Hair Color: </DetailItem><br/>
-            <DetailItem>Eye Color: </DetailItem><br/>
-            <DetailItem>Skin Color: </DetailItem><br/>
-            <DetailItem>Birth Year: </DetailItem><br/>
-            <DetailItem>Homeworld: </DetailItem><br/>    
+            Gender: <br/>
+            Height: <br/>
+            Mass: <br/>
+            Hair Color: <br/>
+            Eye Color: <br/>
+            Skin Color: <br/>
+            Birth Year: <br/>
+            Homeworld: <br/>    
           </DetailLeft>
           <DetailRight> 
             {details.gender}<br/> 

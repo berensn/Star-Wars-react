@@ -62,14 +62,14 @@ class DetailPlanet extends Component {
         </DetailPageTitle>
         <DetailListContainer>
           <DetailLeft>
-            <DetailItem>Gravity:</DetailItem><br/>
-            <DetailItem>Population:</DetailItem><br/>
-            <DetailItem>Diameter:</DetailItem><br/>
-            <DetailItem>Terrain:</DetailItem><br/>
-            <DetailItem>Orbital Period:</DetailItem><br/> 
-            <DetailItem>Rotation Period:</DetailItem><br/>
-            <DetailItem>Surface Water:</DetailItem><br/>
-            <DetailItem>Climate:</DetailItem><br/>        
+            Gravity:<br/>
+            Population:<br/>
+            Diameter:<br/>
+            Terrain:<br/>
+            Orbital Period:<br/> 
+            Rotation Period:<br/>
+            Surface Water:<br/>
+            Climate:<br/>        
           </DetailLeft>
           <DetailRight>
             {details.gravity}<br/>

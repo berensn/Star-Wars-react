@@ -73,15 +73,15 @@ class DetailSpecies extends Component {
         </DetailPageTitle>
         <DetailListContainer>
           <DetailLeft>
-            <DetailItem>Designation: </DetailItem><br/>
-            <DetailItem>Classification: </DetailItem><br/>
-            <DetailItem>Average Lifespan: </DetailItem><br/>
-            <DetailItem>Hair Colors: </DetailItem><br/>
-            <DetailItem>Eye Colors: </DetailItem><br/>
-            <DetailItem>Skin Colors: </DetailItem><br/>
-            <DetailItem>Average Height: </DetailItem><br/>
-            <DetailItem>Homeworld: </DetailItem><br/>  
-            <DetailItem>Language: </DetailItem><br/> 
+            Designation: <br/>
+            Classification: <br/>
+            Average Lifespan: <br/>
+            Hair Colors: <br/>
+            Eye Colors: <br/>
+            Skin Colors: <br/>
+            Average Height: <br/>
+            Homeworld: <br/>  
+            Language: <br/> 
           </DetailLeft>
           <DetailRight>
             {details.designation}<br/>

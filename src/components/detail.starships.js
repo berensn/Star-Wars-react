@@ -64,17 +64,17 @@ class DetailStarships extends Component {
         </DetailPageTitle>
         <DetailListContainer>
           <DetailLeft>
-            <DetailItem>Model: </DetailItem><br/>
-            <DetailItem>Manufacturer: </DetailItem><br/>
-            <DetailItem>Starship Class: </DetailItem><br/>
-            <DetailItem>Length: </DetailItem><br/>
-            <DetailItem>Max Atmosphering Speed: </DetailItem><br/>
-            <DetailItem>Hyperdrive Rating: </DetailItem><br/>
-            <DetailItem>MGLT: </DetailItem><br/>
-            <DetailItem>Cargo Capacity: </DetailItem><br/>
-            <DetailItem>Crew: </DetailItem><br/>
-            <DetailItem>Passengers: </DetailItem><br/>  
-            <DetailItem>Cost in Credits: </DetailItem><br/>        
+            Model: <br/>
+            Manufacturer: <br/>
+            Starship Class: <br/>
+            Length: <br/>
+            Max Atmosphering Speed: <br/>
+            Hyperdrive Rating: <br/>
+            MGLT: <br/>
+            Cargo Capacity: <br/>
+            Crew: <br/>
+            Passengers: <br/>  
+            Cost in Credits: <br/>        
           </DetailLeft>
           <DetailRight>
             {details.model}<br/>

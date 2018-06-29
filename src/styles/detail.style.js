@@ -18,14 +18,11 @@ export const DetailItemListTitle = styled.span`
   color: #ebebeb;
 `;
 
-export const DetailItem = styled.span`
-  color: #ebebeb;
-`;
-
 export const DetailLeft = styled.div`
   text-align: right;
   float: left;
   width: 49%;
+  color: #ebebeb;
 `;
 
 export const DetailRight = styled.div`

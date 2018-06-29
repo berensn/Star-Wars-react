@@ -64,15 +64,15 @@ class DetailVehicles extends Component {
         </DetailPageTitle>
         <DetailListContainer>
           <DetailLeft>
-            <DetailItem>Model: </DetailItem><br/>
-            <DetailItem>Manufacturer: </DetailItem><br/>
-            <DetailItem>Vehicle Class: </DetailItem><br/>
-            <DetailItem>Length: </DetailItem><br/>
-            <DetailItem>Max Atmosphering Speed: </DetailItem><br/>
-            <DetailItem>Cargo Capacity: </DetailItem><br/>
-            <DetailItem>Crew: </DetailItem><br/>
-            <DetailItem>Passengers: </DetailItem><br/>  
-            <DetailItem>Cost in Credits: </DetailItem><br/>        
+            Model: <br/>
+            Manufacturer: <br/>
+            Vehicle Class: <br/>
+            Length: <br/>
+            Max Atmosphering Speed: <br/>
+            Cargo Capacity: <br/>
+            Crew: <br/>
+            Passengers: <br/>  
+            Cost in Credits: <br/>        
           </DetailLeft>
           <DetailRight>
             {details.model}<br/>

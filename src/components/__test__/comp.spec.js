@@ -13,6 +13,6 @@ describe('<Nav/>', () => {
         <Nav/>,    
     );
     console.log(wrapper.debug());
-    expect(wrapper.find(NavLink)).to.have.length(1);
+    expect(wrapper.find('Styled(NavLink)')).to.have.length(1);
   });
 });
