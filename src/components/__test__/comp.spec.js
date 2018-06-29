@@ -1,10 +1,7 @@
 import React from 'react';
-import { MemoryRouter, Route, Switch, NavLink } from 'react-router-dom';
-import { render, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 import { expect } from 'chai';
-import Nav from '../nav';
-import NavLinq from '../../styles/nav.style';
-import Main from '../main';
+import Nav from '../nav.js';
 
 
 describe('<Nav/>', () => {
@@ -13,6 +10,6 @@ describe('<Nav/>', () => {
         <Nav/>,    
     );
     console.log(wrapper.debug());
-    expect(wrapper.find('Styled(NavLink)')).to.have.length(1);
+    expect(wrapper.find('Styled(NavLink)')).to.have.length(7);
   });
 });

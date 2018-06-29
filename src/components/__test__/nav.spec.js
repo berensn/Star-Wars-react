@@ -2,7 +2,6 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import renderer from 'react-test-renderer';
 import Nav from '../nav.js';
-import Main from '../main';
 import Category from '../category';
 import { Route } from 'react-router-dom';
 import { NavLinq } from '../../styles/nav.style';
