@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { graphql } from 'react-apollo';
 import  gql  from 'graphql-tag';
+import { Redirect } from 'react-router-dom';
 import { PageTitle } from '../styles/category.style';
 import { categoryDataMap } from './global';
 import '../App.css';
@@ -28,10 +29,10 @@ gql`{
 }`
 class Category extends Component {
   render(){
-    var categoryData = '';
-    var pageTitle = '';
-    var path = '';
-    var bool = false;
+    let categoryData = {empty: true};
+    let pageTitle = '';
+    let path = '';
+    let bool = false;
     //console.log(this.props.data);
     if (this.props.data.loading === true){
 			return <div>Loading...</div>;
@@ -72,6 +73,9 @@ class Category extends Component {
       default:
         console.log('default');
         break;
+    }
+    if (categoryData.empty){
+      return <Redirect to="/home" />
     }
     return(
 			<div>		

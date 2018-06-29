@@ -7,7 +7,6 @@ import {
   DetailContainer,
   DetailPageTitle,
   DetailItemListTitle,
-  DetailItem,
   DetailLeft,
   DetailRight, 
   DetailListContainer
